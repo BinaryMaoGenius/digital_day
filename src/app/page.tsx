@@ -1,88 +1,132 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import { Mic2, Calendar, MapPin, Award, ArrowRight, Zap, Code, Shield } from "lucide-react";
 
 export default function Home() {
+  const speakers = [
+    { name: "Dr. Moussa Kanté", role: "Expert en IA & Big Data", org: "RobotMali", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop" },
+    { name: "Fatoumata Traoré", role: "Spécialiste Cybersécurité", org: "CyberSec Mali", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&auto=format&fit=crop" },
+    { name: "Oumar Diallo", role: "Architecte Cloud", org: "Google Developers Group", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop" },
+    { name: "Awa Sidibé", role: "Lead Dev Mobile", org: "Innov'Mali", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&h=200&auto=format&fit=crop" },
+  ];
+
+  const highlights = [
+    { title: "Conférences", desc: "Des leaders d'opinion partagent leur vision du futur numérique au Mali.", icon: <Mic2 className="w-6 h-6" /> },
+    { title: "CTF Compétition", desc: "Testez vos compétences en sécurité informatique et gagnez des prix.", icon: <Shield className="w-6 h-6" /> },
+    { title: "IA Hackathon", desc: "Développez des solutions intelligentes pour les défis locaux.", icon: <Code className="w-6 h-6" /> },
+    { title: "Networking", desc: "Rencontrez vos futurs collaborateurs et mentors de l'industrie.", icon: <Zap className="w-6 h-6" /> },
+  ];
+
   return (
-    <main className="relative min-h-screen flex flex-col items-center overflow-x-hidden">
+    <main className="relative min-h-screen flex flex-col items-center overflow-x-hidden bg-background">
       <Navbar />
 
-      {/* Background Decorative Elements */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/20 blur-[120px] rounded-full" />
-      <div className="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] bg-secondary/20 blur-[100px] rounded-full" />
-
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 pt-20">
-        <div className="inline-block px-4 py-1.5 mb-6 glass rounded-full text-xs font-semibold tracking-wider uppercase text-primary border-primary/20">
-          Digital Day 2026 • Bamako, Mali
+      <section className="relative w-full flex flex-col items-center justify-center min-h-[90vh] text-center px-6 pt-32 pb-20">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-30">
+          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/20 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[10%] right-[-10%] w-[40%] h-[40%] bg-secondary/20 blur-[100px] rounded-full" />
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter">
-          Propulsez votre <br />
-          <span className="text-gradient">talent informatique</span>
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 glass rounded-full text-xs font-bold tracking-wider uppercase text-primary border border-primary/20 animate-in fade-in slide-in-from-top-4 duration-700">
+          <Calendar className="w-3.5 h-3.5" /> 15 Mai 2026 • Bamako, Mali
+        </div>
+
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 tracking-tighter leading-none animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+          L'ÉLITE DU <br />
+          <span className="text-gradient">NUMÉRIQUE</span>
         </h1>
 
-        <p className="max-w-2xl text-lg md:text-xl text-slate-400 mb-12 leading-relaxed">
-          Rejoignez l'événement technologique incontournable du Club IT.
-          Une journée d'innovation, de défis et de networking au cœur de la jeunesse malienne.
+        <p className="max-w-3xl text-xl md:text-2xl text-slate-400 mb-12 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+          Plongez au cœur de l'innovation lors de la plus grande journée technologique organisée par le Club IT. Conférences d'experts, compétitions de haut niveau et opportunités uniques.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-6 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
           <Link
             href="/inscription"
-            className="bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all hover:shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)] hover:scale-105"
+            className="bg-primary hover:bg-blue-600 text-white px-10 py-5 rounded-[24px] text-xl font-black transition-all hover:shadow-[0_0_50px_-10px_rgba(59,130,246,0.6)] hover:scale-105 flex items-center gap-3"
           >
-            Je m'inscris maintenant
+            Je m'inscris <ArrowRight className="w-6 h-6" />
           </Link>
           <Link
             href="/programme"
-            className="glass hover:bg-white/10 px-8 py-4 rounded-2xl text-lg font-bold transition-all"
+            className="glass hover:bg-white/10 px-10 py-5 rounded-[24px] text-xl font-bold transition-all border border-white/5"
           >
-            Voir le programme
+            Explorer le programme
           </Link>
-        </div>
-
-        {/* Quick Stats / Info */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 w-full max-w-4xl">
-          <div className="flex flex-col">
-            <span className="text-3xl font-bold text-white">4+</span>
-            <span className="text-sm text-slate-500 uppercase tracking-widest">Sections</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-3xl font-bold text-white">10+</span>
-            <span className="text-sm text-slate-500 uppercase tracking-widest">Projets</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-3xl font-bold text-white">500+</span>
-            <span className="text-sm text-slate-500 uppercase tracking-widest">Participants</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-3xl font-bold text-white">100%</span>
-            <span className="text-sm text-slate-500 uppercase tracking-widest">Innovation</span>
-          </div>
         </div>
       </section>
 
-      {/* Feature Preview Section (Brief) */}
-      <section className="w-full max-w-6xl px-6 py-32">
-        <div className="flex flex-col items-center text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Explorez nos sections</h2>
-          <div className="w-24 h-1 bg-primary rounded-full" />
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {['IA & Data', 'Cybersécurité', 'Web & Mobile', 'Robotique'].map((section) => (
-            <div key={section} className="glass p-8 rounded-3xl hover:border-primary/50 transition-colors group cursor-default">
-              <div className="w-12 h-12 bg-primary/10 rounded-2xl mb-6 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <div className="w-3 h-3 bg-primary rounded-full" />
+      {/* Highlights Section */}
+      <section className="w-full max-w-7xl px-6 py-32 border-y border-white/5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {highlights.map((item, idx) => (
+            <div key={idx} className="group">
+              <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all border border-white/5">
+                {item.icon}
               </div>
-              <h3 className="text-xl font-bold mb-2">{section}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Découvrez des projets innovants et participez à des ateliers pratiques.
-              </p>
+              <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+              <p className="text-slate-500 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
+
+      {/* Speakers Section */}
+      <section className="w-full max-w-7xl px-6 py-32 bg-white/[0.01]">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="max-w-2xl">
+            <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">NOS <span className="text-gradient">SPEAKERS</span></h2>
+            <p className="text-slate-400 text-xl leading-relaxed">
+              Rencontrez les visionnaires et les experts qui façonnent l'avenir technologique du Mali et de l'Afrique.
+            </p>
+          </div>
+          <Link href="/programme" className="text-primary font-bold flex items-center gap-2 hover:opacity-80 transition-opacity">
+            Voir tous les intervenants <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {speakers.map((speaker, idx) => (
+            <div key={idx} className="glass p-6 rounded-[32px] border border-white/5 group hover:border-primary/30 transition-all">
+              <div className="aspect-square rounded-[24px] overflow-hidden mb-6 relative">
+                <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+              <h3 className="text-xl font-bold mb-1">{speaker.name}</h3>
+              <p className="text-primary text-sm font-medium mb-3">{speaker.role}</p>
+              <div className="flex items-center gap-2 text-xs text-slate-500 font-semibold uppercase tracking-widest">
+                <MapPin className="w-3 h-3" /> {speaker.org}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="w-full max-w-6xl px-6 py-32 mb-20">
+        <div className="glass p-12 md:p-24 rounded-[60px] text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-primary/10 blur-[100px] -z-10" />
+          <h2 className="text-4xl md:text-7xl font-black mb-10 tracking-tighter leading-tight">
+            PRÊT À REJOINDRE <br /> LA RÉVOLUTION ?
+          </h2>
+          <Link
+            href="/inscription"
+            className="inline-flex bg-white text-black px-12 py-6 rounded-3xl text-2xl font-black hover:scale-105 transition-all shadow-xl"
+          >
+            S'INSCRIRE MAINTENANT
+          </Link>
+          <div className="mt-12 flex justify-center gap-12 text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">
+            <span>Places Limitées</span>
+            <span>Accès Gratuit</span>
+            <span>Certificat Inclus</span>
+          </div>
+        </div>
+      </section>
+
+      <footer className="w-full py-12 px-6 border-t border-white/5 text-center text-slate-500 text-sm">
+        <p>© 2026 Club IT - Digital Day. Tous droits réservés.</p>
+      </footer>
     </main>
   );
 }
