@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Countdown from "@/components/Countdown";
 import Particles from "@/components/Particles";
+import Venue from "@/components/Venue";
 import FAQ from "@/components/FAQ";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -152,6 +153,7 @@ export default function Home() {
         </div>
       </section>
 
+      <Venue />
       <FAQ />
 
       {/* CTA Section */}

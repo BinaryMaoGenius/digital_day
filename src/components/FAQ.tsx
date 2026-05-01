@@ -19,7 +19,7 @@ const faqs = [
     },
     {
         q: "Où se déroule exactement l'événement ?",
-        a: "L'événement se tiendra à Bamako. Le lieu exact sera communiqué par email à tous les participants inscrits une semaine avant l'événement."
+        a: "L'événement se tiendra sur le campus de l'Université Internationale Privée d'Excellence (UIPE), située sur la Colline du Savoir à Bamako. C'est un cadre exceptionnel avec une vue panoramique sur la capitale."
     }
 ];
 
