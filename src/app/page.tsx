@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Countdown from "@/components/Countdown";
 import Particles from "@/components/Particles";
