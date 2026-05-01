@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ExternalLink, Zap, Trophy, Users, QrCode, Monitor, Gamepad2, ChevronRight } from "lucide-react";
 
 // ⚠️ Remplacez cette URL par l'URL de votre service Render une fois déployé
-const QUIZ_BASE_URL = process.env.NEXT_PUBLIC_QUIZ_URL || "http://localhost:3000";
+const QUIZ_BASE_URL = process.env.NEXT_PUBLIC_QUIZ_URL || "https://live-quiz-digitalday.onrender.com";
 
 export default function QuizPage() {
     const [gameId, setGameId] = useState("");
