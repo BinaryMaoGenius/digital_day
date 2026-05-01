@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 export default function Venue() {
     return (
-        <section className="w-full max-w-6xl px-6 py-32">
-            <div className="glass p-8 md:p-16 rounded-[3.5rem] border border-white/5 relative overflow-hidden group">
+        <section className="w-full max-w-6xl px-4 md:px-6 py-20 md:py-32">
+            <div className="glass p-6 md:p-16 rounded-[2rem] md:rounded-[3.5rem] border border-white/5 relative overflow-hidden group">
                 {/* Decorative background elements */}
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-20 -z-10 group-hover:bg-primary/10 transition-colors duration-700" />
                 <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full -z-10" />

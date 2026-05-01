@@ -60,7 +60,11 @@ export default function Particles() {
         const init = () => {
             if (!canvas) return;
             particles = [];
-            const count = Math.floor((canvas.width * canvas.height) / 15000);
+            // Ajustement du nombre de particules selon la puissance supposée (basée sur la taille d'écran)
+            const isMobile = window.innerWidth < 768;
+            const density = isMobile ? 30000 : 15000;
+            const count = Math.floor((canvas.width * canvas.height) / density);
+            
             for (let i = 0; i < count; i++) {
                 particles.push(new Particle(canvas.width, canvas.height));
             }
