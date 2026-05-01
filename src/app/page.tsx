@@ -30,7 +30,7 @@ export default function Home() {
         </div>
 
         <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 glass rounded-full text-xs font-bold tracking-wider uppercase text-primary border border-primary/20 animate-in fade-in slide-in-from-top-4 duration-700">
-          <Calendar className="w-3.5 h-3.5" /> 15 Mai 2026 • Bamako, Mali
+          <Calendar className="w-3.5 h-3.5" /> Samedi 09 Mai 2026 • Bamako, Mali
         </div>
 
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 tracking-tighter leading-none animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
@@ -39,6 +39,7 @@ export default function Home() {
         </h1>
 
         <p className="max-w-3xl text-xl md:text-2xl text-slate-400 mb-12 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+          <span className="text-white font-bold italic block mb-4">"Une nouvelle génération pour bâtir le Mali numérique de demain"</span>
           Plongez au cœur de l'innovation lors de la plus grande journée technologique organisée par le Club IT. Conférences d'experts, compétitions de haut niveau et opportunités uniques.
         </p>
 

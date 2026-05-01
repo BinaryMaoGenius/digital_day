@@ -117,7 +117,7 @@ export default function Programme() {
                         Le planning est optimisé pour vous offrir la meilleure expérience possible. Arrivez tôt pour profiter du networking !
                     </p>
                     <div className="flex flex-wrap justify-center gap-8 text-slate-500 font-bold uppercase tracking-[0.2em] text-[10px]">
-                        <span>15 Mai 2026</span>
+                        <span>09 Mai 2026</span>
                         <span>Bamako, Mali</span>
                         <span>Club IT</span>
                     </div>
