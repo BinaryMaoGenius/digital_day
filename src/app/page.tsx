@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
-import { Mic2, Calendar, MapPin, Award, ArrowRight, Zap, Code, Shield } from "lucide-react";
+import { Mic2, Calendar, MapPin, Award, ArrowRight, Zap, Code, Shield, Gamepad2 } from "lucide-react";
 
 export default function Home() {
   const speakers = [
@@ -11,10 +11,11 @@ export default function Home() {
   ];
 
   const highlights = [
-    { title: "Conférences", desc: "Des leaders d'opinion partagent leur vision du futur numérique au Mali.", icon: <Mic2 className="w-6 h-6" /> },
-    { title: "CTF Compétition", desc: "Testez vos compétences en sécurité informatique et gagnez des prix.", icon: <Shield className="w-6 h-6" /> },
-    { title: "IA Hackathon", desc: "Développez des solutions intelligentes pour les défis locaux.", icon: <Code className="w-6 h-6" /> },
-    { title: "Networking", desc: "Rencontrez vos futurs collaborateurs et mentors de l'industrie.", icon: <Zap className="w-6 h-6" /> },
+    { title: "Conférences", desc: "Des leaders d'opinion partagent leur vision du futur numérique au Mali.", icon: <Mic2 className="w-6 h-6" />, href: "/programme" },
+    { title: "CTF Compétition", desc: "Testez vos compétences en sécurité informatique et gagnez des prix.", icon: <Shield className="w-6 h-6" />, href: "/programme" },
+    { title: "IA Hackathon", desc: "Développez des solutions intelligentes pour les défis locaux.", icon: <Code className="w-6 h-6" />, href: "/programme" },
+    { title: "Networking", desc: "Rencontrez vos futurs collaborateurs et mentors de l'industrie.", icon: <Zap className="w-6 h-6" />, href: "/programme" },
+    { title: "Quiz Live 🎮", desc: "Notre quiz en temps réel sur notre propre plateforme. QR code, scores live, classement instantané.", icon: <Gamepad2 className="w-6 h-6" />, href: "/quiz" },
   ];
 
   return (
@@ -59,15 +60,15 @@ export default function Home() {
 
       {/* Highlights Section */}
       <section className="w-full max-w-7xl px-6 py-32 border-y border-white/5">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {highlights.map((item, idx) => (
-            <div key={idx} className="group">
+            <Link key={idx} href={item.href} className="group cursor-pointer">
               <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all border border-white/5">
                 {item.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+              <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
               <p className="text-slate-500 leading-relaxed">{item.desc}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

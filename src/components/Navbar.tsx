@@ -11,6 +11,7 @@ export default function Navbar() {
         { name: "Programme", href: "/programme" },
         { name: "Le Club", href: "/club" },
         { name: "Sections", href: "/sections" },
+        { name: "Quiz Live 🎮", href: "/quiz" },
         { name: "Contact", href: "/contact" },
     ];
 
