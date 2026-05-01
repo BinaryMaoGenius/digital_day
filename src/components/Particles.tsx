@@ -28,24 +28,24 @@ export default function Particles() {
             speedY: number;
             opacity: number;
 
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
+            constructor(w: number, h: number) {
+                this.x = Math.random() * w;
+                this.y = Math.random() * h;
                 this.size = Math.random() * 2 + 0.5;
                 this.speedX = Math.random() * 0.5 - 0.25;
                 this.speedY = Math.random() * 0.5 - 0.25;
                 this.opacity = Math.random() * 0.5 + 0.1;
             }
 
-            update() {
+            update(w: number, h: number) {
                 this.x += this.speedX;
                 this.y += this.speedY;
 
-                if (this.x > canvas.width) this.x = 0;
-                else if (this.x < 0) this.x = canvas.width;
+                if (this.x > w) this.x = 0;
+                else if (this.x < 0) this.x = w;
 
-                if (this.y > canvas.height) this.y = 0;
-                else if (this.y < 0) this.y = canvas.height;
+                if (this.y > h) this.y = 0;
+                else if (this.y < 0) this.y = h;
             }
 
             draw() {
@@ -58,17 +58,19 @@ export default function Particles() {
         }
 
         const init = () => {
+            if (!canvas) return;
             particles = [];
             const count = Math.floor((canvas.width * canvas.height) / 15000);
             for (let i = 0; i < count; i++) {
-                particles.push(new Particle());
+                particles.push(new Particle(canvas.width, canvas.height));
             }
         };
 
         const animate = () => {
+            if (!canvas || !ctx) return;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             particles.forEach(p => {
-                p.update();
+                p.update(canvas.width, canvas.height);
                 p.draw();
             });
             animationFrameId = requestAnimationFrame(animate);
