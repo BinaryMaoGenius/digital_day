@@ -1,8 +1,10 @@
 import Navbar from "@/components/Navbar";
+import Countdown from "@/components/Countdown";
 import Link from "next/link";
 import { Mic2, Calendar, MapPin, Award, ArrowRight, Zap, Code, Shield, Gamepad2 } from "lucide-react";
 
 export default function Home() {
+
   const speakers = [
     { name: "Dr. Moussa Kanté", role: "Expert en IA & Big Data", org: "RobotMali", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop" },
     { name: "Fatoumata Traoré", role: "Spécialiste Cybersécurité", org: "CyberSec Mali", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&auto=format&fit=crop" },
@@ -42,6 +44,10 @@ export default function Home() {
           <span className="text-white font-bold italic block mb-4">"Une nouvelle génération pour bâtir le Mali numérique de demain"</span>
           Plongez au cœur de l'innovation lors de la plus grande journée technologique organisée par le Club IT. Conférences d'experts, compétitions de haut niveau et opportunités uniques.
         </p>
+
+        <div className="mb-16">
+          <Countdown />
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-6 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
           <Link
