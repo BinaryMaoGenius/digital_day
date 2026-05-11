@@ -120,7 +120,7 @@ export default function Inscription() {
                                     <Brain className="w-8 h-8 text-blue-500" />
                                 </div>
                                 <h3 className="text-2xl font-bold mb-2">Développement IA</h3>
-                                <p className="text-slate-400">Créez une solution innovante en utilisant le LLM Djelia.</p>
+                                <p className="text-slate-400">Créez une solution innovante en utilisant une IA de pointe.</p>
                             </div>
                         </div>
                     </div>

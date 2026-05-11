@@ -11,7 +11,7 @@ import { Mic2, Calendar, MapPin, Award, ArrowRight, Zap, Code, Shield, Gamepad2 
 
 export default function Home() {
   const speakers = [
-    { name: "Dr. Moussa Kanté", role: "Expert en IA & Big Data", org: "RobotMali", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop" },
+    { name: "Dr. Moussa Kanté", role: "Expert en IA & Big Data", org: "RobotsMali", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop" },
     { name: "Fatoumata Traoré", role: "Spécialiste Cybersécurité", org: "CyberSec Mali", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&auto=format&fit=crop" },
     { name: "Oumar Diallo", role: "Architecte Cloud", org: "Google Developers Group", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop" },
     { name: "Awa Sidibé", role: "Lead Dev Mobile", org: "Innov'Mali", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&h=200&auto=format&fit=crop" },
@@ -157,6 +157,46 @@ export default function Home() {
 
       <Venue />
       <FAQ />
+
+      <section className="w-full max-w-7xl px-6 py-32">
+        <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative overflow-hidden glass p-1 rounded-[48px] border border-white/5"
+        >
+          <div className="flex flex-col lg:flex-row gap-12 items-center p-8 lg:p-16">
+            <div className="flex-1 text-left">
+              <span className="inline-block px-4 py-1.5 mb-6 glass rounded-full text-[10px] font-black tracking-widest uppercase text-orange-500 border border-orange-500/20">
+                Alliance Technologique Majeure
+              </span>
+              <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tighter">
+                L'INNOVATION MALIENNE <br />
+                <span className="text-orange-500">ROBOTSMALI × CLUB IT</span>
+              </h2>
+              <p className="text-slate-400 text-xl leading-relaxed mb-10">
+                Nous unissons nos forces avec <strong>RobotsMali</strong>, le Centre National de Robotique, pour propulser l'excellence technologique. Une collaboration unique entre l'ingénierie robotique et la cybersécurité.
+              </p>
+              <div className="flex flex-wrap gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center font-black text-black text-xs">RM</div>
+                  <span className="text-xl font-black tracking-tighter">Robots<span className="text-orange-500">Mali</span></span>
+                </div>
+                <div className="text-xl font-bold tracking-tight text-slate-400">Club IT</div>
+                <div className="text-xl font-bold tracking-tight text-slate-400">Université UIE</div>
+              </div>
+            </div>
+            <div className="flex-1 relative w-full aspect-video lg:aspect-auto lg:h-[400px] rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
+              <img 
+                src="/partnership_banner.png" 
+                alt="RobotsMali Partnership" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/20 to-transparent" />
+            </div>
+          </div>
+        </motion.div>
+      </section>
 
       {/* CTA Section */}
       <section className="w-full max-w-6xl px-6 py-32 mb-20">
