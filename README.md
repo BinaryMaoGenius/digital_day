@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>ðŸŒ Digital Day Mali - Official Website</h1>
+  <h1>🌍 Digital Day Mali - Official Website</h1>
   <p><strong>The official landing platform for Mali's premier IT and Digital Innovation event.</strong></p>
 </div>
 
@@ -17,10 +17,10 @@ The official web portal for **Digital Day**, an event dedicated to showcasing te
 - 📱 **Fully Responsive**: A flawless experience across desktop, tablet, and mobile devices.
 - 🎨 **Modern Aesthetics**: Dynamic animations and a sleek UI representing the cutting-edge nature of the event.
 
-## ðŸ› ï¸ Technologies
+## 🛠️ Technologies
 - **Framework**: Next.js
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 
-## ðŸ‘¨â€ðŸ’» Developer
+## 👨‍💻 Developer
 Built by [BinaryMaoGenius](https://github.com/BinaryMaoGenius).
