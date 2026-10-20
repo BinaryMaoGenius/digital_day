@@ -1,26 +1,30 @@
 <div align="center">
-  <h1>🌍 Digital Day Mali - Official Website</h1>
-  <p><strong>The official landing platform for Mali's premier IT and Digital Innovation event.</strong></p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner-light.svg" alt="Digital Day Mali" width="100%">
+  </picture>
 </div>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-</p>
+Site web de **Digital Day**, l’événement IT organisé par le Club IT au Mali : programme, inscription, informations pratiques et un quiz en direct pendant l’événement.
 
-## 🚀 Overview
-The official web portal for **Digital Day**, an event dedicated to showcasing technological innovation and digital transformation in Mali. The platform provides event schedules, speaker profiles, ticketing information, and live updates.
+![Next.js](https://img.shields.io/badge/Next.js-0E0E0C?style=flat-square&logo=nextdotjs&logoColor=D9A441) ![TypeScript](https://img.shields.io/badge/TypeScript-0E0E0C?style=flat-square&logo=typescript&logoColor=D9A441) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0E0E0C?style=flat-square&logo=tailwindcss&logoColor=D9A441) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0E0E0C?style=flat-square&logo=framer&logoColor=D9A441)
 
-## ✨ Key Features
-- ⚡ **SEO Optimized & Fast**: Built on Next.js App Router for optimal Server-Side Rendering (SSR) and SEO.
-- 📱 **Fully Responsive**: A flawless experience across desktop, tablet, and mobile devices.
-- 🎨 **Modern Aesthetics**: Dynamic animations and a sleek UI representing the cutting-edge nature of the event.
+## Ce que contient le site
+- **Accueil** avec compte à rebours, présentation du lieu et FAQ
+- **Programme**, **Inscription**, **Club**, **Sections** et **Contact**
+- **Quiz** : page reliée au projet [Live Quiz](https://github.com/BinaryMaoGenius/live-quiz)
+- Animations (particules, transitions) avec Framer Motion
 
-## 🛠️ Technologies
-- **Framework**: Next.js
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
+## Lancer le projet
+```bash
+npm install
+npm run dev
+```
+Le dépôt contient une configuration `render.yaml` pour un déploiement sur Render.
 
-## 👨‍💻 Developer
-Built by [BinaryMaoGenius](https://github.com/BinaryMaoGenius).
+## Projets liés
+[Digital Day CTF](https://github.com/BinaryMaoGenius/digital-day-ctf) · [Live Quiz](https://github.com/BinaryMaoGenius/live-quiz)
+
+---
+
+Construit par **Emmanuel Elisé Koné** ([BinaryMaoGenius](https://github.com/BinaryMaoGenius)) · *La tech en clair*
