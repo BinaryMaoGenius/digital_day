@@ -25,6 +25,11 @@ Le dépôt contient une configuration `render.yaml` pour un déploiement sur Ren
 ## Projets liés
 [Digital Day CTF](https://github.com/BinaryMaoGenius/digital-day-ctf) · [Live Quiz](https://github.com/BinaryMaoGenius/live-quiz)
 
+## Licence
+
+Code sous [licence MIT](./LICENSE) · © 2026 Emmanuel Elisé Koné.
+Le nom, les logos et l’identité visuelle de **Digital Day** ne sont pas couverts par cette licence.
+
 ---
 
 Construit par **Emmanuel Elisé Koné** ([BinaryMaoGenius](https://github.com/BinaryMaoGenius)) · *La tech en clair*
